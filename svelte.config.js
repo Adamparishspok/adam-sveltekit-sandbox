@@ -1,9 +1,9 @@
-import node from '@sveltejs/adapter-node';
+import vercel from '@sveltejs/adapter-vercel';
 
 const config = {
+	preprocess: preprocess(),
 	kit: {
-		adapter: node()
+		adapter: vercel(),
+		target: '#svelte'
 	}
 };
-
-export default config;
